@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace HeroesVSMonster.Models
 {
-    class Nain : Hero
+    class Foret
     {
-        public Nain()
+        public Foret()
         {
-
+                
         }
-        public Nain(string nom)
-            :base(nom)
-        {
 
+        public int Combat()
+        {
+            return 0;
         }
     }
 }

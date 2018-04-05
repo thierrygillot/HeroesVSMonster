@@ -10,8 +10,13 @@ namespace HeroesVSMonster.Models
     {
         public Dictionary<string, int> sacAdos;
 
-        public Hero(string nom, int endurance, int force, int pointsDevie)
-            :base (nom,endurance,force,pointsDevie)
+        public Hero()
+        {
+
+        }
+
+        public Hero(string nom)
+            :base (nom)
         {
 
         }

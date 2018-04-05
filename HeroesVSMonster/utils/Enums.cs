@@ -4,14 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeroesVSMonster.Models
+namespace HeroesVSMonster.utils
 {
-    class Loup:Monstre
-    {
-        public Loup()
-      
-        {
-
-        }
-    }
+    enum typeHero { Humain, Nain }
+    enum typeMonstre { Loup, Orque, Dragonnet }
 }

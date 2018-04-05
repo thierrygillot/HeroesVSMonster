@@ -9,55 +9,25 @@ namespace HeroesVSMonster.Models
     
     class De
     {
+        Random rnd = new Random();
 
-        public int LancerDe6Faces()
+        //const
+        public De()
         {
-            Random rnd = new Random();
-            float[] tab = new float[4];
-            for (int i = 0; i < 4; i++)
-            {
-                float x = rnd.Next(1, 7);
-                tab[i] = x;
 
-            }
-            tab.OrderByDescending(n => n);
-            float sum = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                sum = sum + tab[i];
-            }
-            float result = (sum / 18) * 100;
-            return (int)result;
+        }
+        
+        //lancer De 6 faces
+        public int lancer6Faces()
+        {
+            return rnd.Next(1, 7);
         }
 
-        public int LancerDe4Faces()
+        //lancer des 4 faces
+        public int lancer4Faces()
         {
-            Random rnd = new Random();
-            float[] tab = new float[4];
-            for (int i = 0; i < 4; i++)
-            {
-                float x = rnd.Next(1, 4);
-                tab[i] = x;
-
-            }
-            tab.OrderByDescending(n => n);
-            float sum = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                sum = sum + tab[i];
-            }
-            float result = (sum / 18) * 100;
-            return (int)result;
+            return rnd.Next(1, 5);
         }
-
-
-
-
-
-
-
-
-
-
+            
     }
 }

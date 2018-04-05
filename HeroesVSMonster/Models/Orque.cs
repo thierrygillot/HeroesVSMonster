@@ -8,8 +8,8 @@ namespace HeroesVSMonster.Models
 {
     class Orque : Monstre
     {
-        public Orque(int endurance, int force, int pointsDevie)
-            :base (endurance,force,pointsDevie)
+        public Orque()
+            
         {
 
         }

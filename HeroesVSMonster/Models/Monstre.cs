@@ -8,8 +8,7 @@ namespace HeroesVSMonster.Models
 {
     class Monstre : Personnage
     {
-        public Monstre(int endurance, int force, int pointsDevie)
-            :base (endurance,force,pointsDevie)
+        public Monstre()
         {
 
         }
