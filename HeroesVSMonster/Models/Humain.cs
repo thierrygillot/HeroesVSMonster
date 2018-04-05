@@ -12,6 +12,7 @@ namespace HeroesVSMonster.Models
         {
 
         }
+
         public Humain(string nom)
             :base (nom)
         {

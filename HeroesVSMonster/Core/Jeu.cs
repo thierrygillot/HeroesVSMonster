@@ -19,6 +19,8 @@ namespace HeroesVSMonster.Core
             Personnage p = new Personnage();
             Start();
         }
+
+        //Initialisation Affichage 
         private void Init()
         {
             Animated(5, y++, 5, $"╔════════════════════════════════════════╗");
@@ -50,9 +52,38 @@ namespace HeroesVSMonster.Core
             return ConsoleKey.A;
         }
 
+        private Personnage CreerHumain()
+        {
+            Humain newHumain = new Humain();
+
+            CreerHumainDonnées(newHumain);
+            Animated(x, y++, 5, $"Bienvenue {newHumain.Nom}");
+            Continue(x, y, 5);
+            return newHumain;
+        }
+
+        private void CreerHumainDonnées(Personnage p)
+        {
+            Console.Clear();
+            x = 5;
+            y = 5;
+
+            string type = p.GetType().Name;
+
+            Animated(x, y++, 5, $"╔═══════════════════════╗");
+            Animated(x, y++, 5, $"║ Creation de l'{type.PadLeft(5)}   ║");
+            Animated(x, y++, 5, $"╚═══════════════════════╝");
+            p.Nom = ReadString(x, y++, 5, $"Quel est le nom de votre {type} : ");
+           
+        }
+
         private void Start()
         {
             Init();
+            Menu();
+
+
+
 
         }
     }

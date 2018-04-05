@@ -12,16 +12,17 @@ namespace HeroesVSMonster.Models
         public string Nom { get; set; }
         public int Endurance { get; private set; }
         public int Force { get; private set; }
-        public int PointsDeVie { get; }
-        public int Or { get; set; }
-        public int Cuivre { get; set; }
+        public int PointsDeVie { get; set; }
         public bool EstMort;
         De de = new Models.De();
 
         //const
         public Personnage()
         {
-
+            Endurance = InitChar();
+            Force = InitChar();
+            PointsDeVie = 20;
+            
         }
         public Personnage(string nom)
         {
@@ -30,6 +31,8 @@ namespace HeroesVSMonster.Models
             Force = InitChar();
             PointsDeVie = 20;
         }
+
+       
 
         //renvoi un int initialiant les caractéristiques
         
@@ -53,17 +56,17 @@ namespace HeroesVSMonster.Models
         }
 
         //renvoi un int correspondant à la frappe
-        public int Frappe()
+        public int Frappe(Personnage personnage)
         {
 
             De de = new Models.De();
             return de.lancer4Faces();
+            
 
         }
 
-        public override string ToString()
-        {
-            return $"{this.GetType().Name} {Nom} possède {Force} de Force, {Endurance} d'Endurance, {PointsDeVie} de points de vie et {Or} d'or.";
-        }
+      
+
+       
     }
 }

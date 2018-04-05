@@ -44,9 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Jeu.cs" />
+    <Compile Include="Interfaces\ICuir.cs" />
+    <Compile Include="Interfaces\IOr.cs" />
     <Compile Include="Models\De.cs" />
     <Compile Include="Models\Dragonnet.cs" />
-    <Compile Include="Models\Foret.cs" />
     <Compile Include="Models\Hero.cs" />
     <Compile Include="Models\Humain.cs" />
     <Compile Include="Models\Loup.cs" />
